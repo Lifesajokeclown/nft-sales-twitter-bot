@@ -126,7 +126,7 @@ async function monitorContract() {
 
       // if more than one asset sold, link directly to etherscan tx, otherwise the marketplace item
       if (tokens.length > 1) {
-        tweetWithImage(
+        tweet(
           `${_.get(
             tokenData,
             'assetName',
@@ -136,7 +136,7 @@ async function monitorContract() {
           } https://etherscan.io/tx/${transactionHash}`
         );
       } else {
-        tweetWithImage(
+        tweet(
           `${_.get(
             tokenData,
             'assetName',
